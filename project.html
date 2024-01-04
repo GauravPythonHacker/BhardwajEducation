@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<head>
+	<!-- Other meta tags and styles -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+	<!-- Other styles and scripts -->
+	<link rel="stylesheet" href="style.css">
+	
+	
+  <title>Wonderful App</title>
+</head>
+<body>
+  <header>
+  <nav>
+  	<div class="bottom-nav">
+  		<ul>
+  			<li><a href="#home" class="active">
+  			 <span><i class="fa fa-home"></i> Home</span> <!-- Example of using Font Awesome icons -->
+   			 </a></li>
+   			 
+  			<li><a href="#subjects">
+  			<span><i class="fa fa-book"></i>Courses</span>
+  			</a></li>
+  			
+  			<li><a href="#homeworks">
+  			<span><i class="fa fa-tasks"></i>Community</span>
+   			 </a></li>
+   			 
+   			 <li><a href="#analytics">
+   			 <span><i class="fa fa-tasks"></i>Analytics</span>
+   			 </a></li>
+   			 
+   			 <li><a href="#about">
+   			 <span><i class="fa fa-tasks"></i>About</span>
+   			 </a></li>
+   			 
+  </ul>
+  </div>
+  </nav>
+  </header>
+
+  <main>
+  
+  <section class="home-section active" id="home">
+  <div class = "home-container">
+  	<div class="hero">
+  		<div class="hero-slide active">
+ 			<img src="slide1.png">
+  		</div>
+  		
+  		<div class="hero-slide">
+  		<img src="slide2.png">
+  		
+  		</div>
+  		<div class="hero-slide">
+  		<img src="slide3.png">
+  		
+  		</div>
+  	</div>
+  	
+  	<div class="search">
+  	<input type="text" id="searchInput" placeholder="Search courses, videos, etc.">
+  	<button id="searchBtn"><i class="fas fa-search"></i></button>
+  	</div>
+  	
+  
+  	
+  	
+  	<div class="Videos">
+ 	 	<iframe 
+ 		src="https://youtube.com/embed/gfDE2a7MKjA" 
+  		title="Embedded YouTube Video"
+  		frameborder="0" 
+  		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+  		allowfullscreen> 
+	  	</iframe>
+  		
+  		<iframe 
+  		src="https://youtube.com/embed/UmnCZ7-9yDY" 
+  		title="Embedded YouTube Video"
+  		frameborder="0" 
+  		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+  		allowfullscreen> 
+  		</iframe>
+  		
+  		<iframe 
+  		src="https://youtube.com/embed/hKB-YGF14SY" 
+  		title="Embedded YouTube Video"
+  		frameborder="0" 
+  		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+  		allowfullscreen> 
+  		</iframe>
+  		
+  		<iframe 
+  		src="https://youtube.com/embed/UmnCZ7-9yDY" 
+  		title="Embedded YouTube Video"
+  		frameborder="0" 
+  		allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+  		allowfullscreen> 
+  		</iframe>
+  		
+  	</div>
+  	</div>
+  </section>
+  
+  
+  	<section class="subjects-section" id="subjects">
+  	<div class="subjects-container">
+  	<h3> Courses </h3>
+  	<select id="courseDropdown">
+  	<option value="math">Math</option>
+  	<option value="science">Science</option>
+  	<!-- Add more options as needed -->
+  	</select>
+  	
+  	<input type="text" id="coursesearchInput" placeholder="Search for a course">
+  	
+  	<div id="selectedCourse"></div>
+  	
+  	<h3> Popular Courses </h3>
+  	<div class="card">
+  	<h3>Mathematics</h3>
+  	
+  	<div class="card-content">
+  	<p>Get into the language of patterns and logic, underpins problem-solving and our understanding of the universe's structure.</p>
+ 	<a href="maths.html" class="btn"><i class="fas fa-arrow-circle-right"></i></a>
+  	</div>
+  	</div>
+  	
+  	<div class="card">
+  	<h3>Physics</h3>
+  	
+  	<div class="card-content">
+  	<p>Get into the language of patterns and logic, underpins problem-solving and our understanding of the universe's structure.</p>
+  	<a href="maths.html" class="btn"><i class="fas fa-arrow-circle-right"></i></a>
+  	</div>
+  	</div>
+  	
+  	<div class="card">
+  	<h3>Chemistry</h3>
+  	
+  	<div class="card-content">
+  	<p>Get into the language of patterns and logic, underpins problem-solving and our understanding of the universe's structure.</p>
+  	<a href="maths.html" class="btn"><i class="fas fa-arrow-circle-right"></i></a>
+  	</div>
+  	</div>
+  	
+  	</div>
+  	
+  </section>
+  
+  <section class="homeworks-section" id="homeworks">
+  <div class="homeworks-conatainer">
+  	<h3> homeworks </h3>
+  </div>
+  </section>
+  
+  <!-- Your existing HTML code -->
+  
+  <section class= "analytics-section" id="analytics">
+  <div class="analytics-container">
+  <div class="progress-wrapper">
+  <svg class="progress-ring" width="120" height="120">
+  <circle
+  class="progress-ring-circle"
+  stroke="#ccc"
+  stroke-width="10"
+  fill="transparent"
+  r="50"
+  cx="60"
+  cy="60"
+  />
+  <circle
+  class="progress-ring-indicator"
+  stroke="url(#gradient)"
+  stroke-width="10"
+  fill="transparent"
+  r="50"
+  cx="60"
+  cy="60"
+  stroke-dasharray="314"
+  stroke-dashoffset="0"
+  transform="rotate(-90 60 60)"
+  />
+  <text
+  x="50%"
+  y="50%"
+  dy=".35em"
+  text-anchor="middle"
+  font-size="20"
+  fill="#333"
+  class="progress-value"
+  transform= "rotate(90 55 65)"
+  >
+  0%
+  </text>
+  <defs>
+  <linearGradient id="gradient">
+  <stop offset="0%" stop-color="#11FF00" />
+  <stop offset="100%" stop-color="#FA00FF" />
+  </linearGradient>
+  </defs>
+  </svg>
+  </div>
+  </div>
+  </section>
+  
+  <section class= "about-section" id="about">
+  
+  
+  <div class="responsive-container-block bigContainer">
+  <div class="responsive-container-block Container bottomContainer">
+  <div class="ultimateImg">
+  <img class="mainImg" src="myimg.png">
+  </div>
+  <div class="allText bottomText">
+  <p class="text-blk headingText">
+  About Me
+  </p>
+  <p class="text-blk subHeadingText">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  </p>
+  <p class="text-blk description">
+  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum pulvinar ullamcorper suspendisse ac eget. Pellentesque tempus leo in ullamcorper quis vestibulum ligula elementum ut.
+  </p>
+  <a class="explore">
+  View Services
+  </a>
+  </div>
+  </div>
+  </div>
+  
+  </section>
+  
+  
+  
+  </main>
+  
+  
+  
+  
+  
+ 
+  <script src="script.js"> </script>
+</body>
+</html>
