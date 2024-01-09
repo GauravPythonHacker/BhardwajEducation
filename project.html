@@ -5,6 +5,7 @@
 	<!-- Other meta tags and styles -->
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 	<!-- Other styles and scripts -->
+	
 	<link rel="stylesheet" href="style.css">
 	
 	
@@ -24,15 +25,17 @@
   			</a></li>
   			
   			<li><a href="#homeworks">
-  			<span><i class="fa fa-tasks"></i>Community</span>
+  			<span><i class="fas fa-users"></i>Community</span>
    			 </a></li>
    			 
-   			 <li><a href="#analytics">
-   			 <span><i class="fa fa-tasks"></i>Analytics</span>
+   			 <li><a href="#profile">
+   			 <span><i class="fas fa-info-circle"></i>Profile</span>
    			 </a></li>
    			 
+   			 		 
+   			 		 
    			 <li><a href="#about">
-   			 <span><i class="fa fa-tasks"></i>About</span>
+   			 <span><i class="fas fa-info-circle"></i>About</span>
    			 </a></li>
    			 
   </ul>
@@ -119,32 +122,81 @@
   	<div id="selectedCourse"></div>
   	
   	<h3> Popular Courses </h3>
-  	<div class="card">
-  	<h3>Mathematics</h3>
-  	
-  	<div class="card-content">
-  	<p>Get into the language of patterns and logic, underpins problem-solving and our understanding of the universe's structure.</p>
- 	<a href="maths.html" class="btn"><i class="fas fa-arrow-circle-right"></i></a>
-  	</div>
-  	</div>
   	
   	<div class="card">
-  	<h3>Physics</h3>
+  	<h3>Python</h3>
   	
   	<div class="card-content">
-  	<p>Get into the language of patterns and logic, underpins problem-solving and our understanding of the universe's structure.</p>
-  	<a href="maths.html" class="btn"><i class="fas fa-arrow-circle-right"></i></a>
+  	<p>
+  	Python is a high-level programming language useful in many things such as
+  	Machine Learning, Artificial Intelligence, Data Science and Deep Learning.
+  	</p>
+  	<a href="pythoncourse.html" class="btn"><i class="fas fa-arrow-circle-right"></i></a>
   	</div>
   	</div>
   	
   	<div class="card">
-  	<h3>Chemistry</h3>
+  	<h3>Java</h3>
   	
   	<div class="card-content">
-  	<p>Get into the language of patterns and logic, underpins problem-solving and our understanding of the universe's structure.</p>
-  	<a href="maths.html" class="btn"><i class="fas fa-arrow-circle-right"></i></a>
+  	<p>
+  		Java is a high-level programming language useful in Application Development,
+  		Game Development, Cloud Applications and Artificial Intelligence.
+  	</p>
+  	<a href="pythoncourse.html" class="btn"><i class="fas fa-arrow-circle-right"></i></a>
   	</div>
   	</div>
+  	
+  	<div class="card">
+  	<h3>Website Development</h3>
+  	
+  	<div class="card-content">
+  	<p>
+  		In this coure you will learn HTML, CSS and Javascript for the full stack devloper and
+  		you will able to make a professional website and manage databases.
+  	</p>
+  	<a href="pythoncourse.html" class="btn"><i class="fas fa-arrow-circle-right"></i></a>
+  	</div>
+  	</div>
+  	
+  	<div class="card">
+  	<h3>Application Development</h3>
+  	
+  	<div class="card-content">
+  	<p>
+  		This course is designed to equip you with the skills needed to create amazing
+  		mobile applications. You will learn Java programming language and understand UI/UX
+  		design principals.
+  	</p>
+  	<a href="pythoncourse.html" class="btn"><i class="fas fa-arrow-circle-right"></i></a>
+  	</div>
+  	</div>
+  	
+  	<div class="card">
+  	<h3>Machine Learning</h3>
+  	
+  	<div class="card-content">
+  	<p>
+  		This course is your gateway into the fascination world of Artificial Intelligence. 
+  		You will learn the core concepts of machine learning, algorithms and learn to train
+  		modals.
+  	</p>
+  	<a href="pythoncourse.html" class="btn"><i class="fas fa-arrow-circle-right"></i></a>
+  	</div>
+  	</div>
+  	
+  	<div class="card">
+  	<h3>Linux</h3>
+  	
+  	<div class="card-content">
+  	<p>
+  		Explore the foundations of Linux, learn to navigate the command lines, manage files
+  		and directories, shell scripting, networking and cybersecurity.
+  	</p>
+  	<a href="pythoncourse.html" class="btn"><i class="fas fa-arrow-circle-right"></i></a>
+  	</div>
+  	</div>
+  	
   	
   	</div>
   	
@@ -152,63 +204,50 @@
   
   <section class="homeworks-section" id="homeworks">
   <div class="homeworks-conatainer">
-  	<h3> homeworks </h3>
+  <div class="community-board">
+  <h2>Community Q&A</h2>
+  <ul class="questions" id="questions">
+  <!-- Questions will be displayed here -->
+  </ul>
+  </div>
+  
+  <div class="input-container">
+  <input type="text" id="userInput" placeholder="Type your question...">
+  <button onclick="askQuestion()">Ask</button>
+  </div>
   </div>
   </section>
+  
+  <section class="profile-section" id = "profile">
+  
+  <div class="profile-container">
+  <div class="profile">
+      
+      	<img src="defaultprofile.png"></image>
+      	<input type="file" name="" id="file" accept="image/*" style="display: none;">
+      	<div class="profile-label">
+      	<label for="file"> EDIT PICTURE </label>
+      </div>
+      
+   			<input type="text" name="" placeholder="Username">
+    		<input type="text" name="" placeholder="Email ID">
+    		<input type="text" name="" placeholder="Phone Number">
+    				
+    		<button class = "btn1" style="float: left; margin: 10px 0 0 18.2%"> Cancle </button>
+    		<button class = "btn2" style="float: left; margin: 10px 18.2% 0 0"> Done </button>
+    		
+    </div>
+  </div>
+  
+  </section>
+  
+  
   
   <!-- Your existing HTML code -->
   
-  <section class= "analytics-section" id="analytics">
-  <div class="analytics-container">
-  <div class="progress-wrapper">
-  <svg class="progress-ring" width="120" height="120">
-  <circle
-  class="progress-ring-circle"
-  stroke="#ccc"
-  stroke-width="10"
-  fill="transparent"
-  r="50"
-  cx="60"
-  cy="60"
-  />
-  <circle
-  class="progress-ring-indicator"
-  stroke="url(#gradient)"
-  stroke-width="10"
-  fill="transparent"
-  r="50"
-  cx="60"
-  cy="60"
-  stroke-dasharray="314"
-  stroke-dashoffset="0"
-  transform="rotate(-90 60 60)"
-  />
-  <text
-  x="50%"
-  y="50%"
-  dy=".35em"
-  text-anchor="middle"
-  font-size="20"
-  fill="#333"
-  class="progress-value"
-  transform= "rotate(90 55 65)"
-  >
-  0%
-  </text>
-  <defs>
-  <linearGradient id="gradient">
-  <stop offset="0%" stop-color="#11FF00" />
-  <stop offset="100%" stop-color="#FA00FF" />
-  </linearGradient>
-  </defs>
-  </svg>
-  </div>
-  </div>
-  </section>
-  
   <section class= "about-section" id="about">
   
-  
+  <div class = "about-container">
   <div class="responsive-container-block bigContainer">
   <div class="responsive-container-block Container bottomContainer">
   <div class="ultimateImg">
@@ -219,14 +258,15 @@
   About Me
   </p>
   <p class="text-blk subHeadingText">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  </p>
+  Hey there! I'm Gaurav Bhardwaj, a passionate learner currently studying in Class 6.</p>
   <p class="text-blk description">
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fermentum pulvinar ullamcorper suspendisse ac eget. Pellentesque tempus leo in ullamcorper quis vestibulum ligula elementum ut.
-  </p>
+Hailing from Aurangabad, Bihar, I've been immersed in the world of coding since I was in Class 3. My journey so far includes diving into Python, exploring website development, and even delving a bit into machine learning.  </p>
+  <p class="text-blk description">
+  Mathematics is my absolute favorite subject, and I consider coding not just a skill but also a hobby that I enthusiastically pursue in my free time. Join me as I continue this exciting journey of learning and exploring the vast universe of technology! </p>
   <a class="explore">
   View Services
   </a>
+  </div>
   </div>
   </div>
   </div>
@@ -234,11 +274,112 @@
   </section>
   
   
-  
   </main>
   
-  
-  
+  <footer class="footer-section">
+  <div class="container">
+  <div class="footer-cta pt-5 pb-5">
+  <div class="row">
+  <div class="col-xl-4 col-md-4 mb-30">
+  <div class="single-cta">
+  <i class="fas fa-map-marker-alt"></i>
+  <div class="cta-text">
+  <h4>Find us</h4>
+  <span>1010 Avenue, sw 54321, chandigarh</span>
+  </div>
+  </div>
+  </div>
+  <div class="col-xl-4 col-md-4 mb-30">
+  <div class="single-cta">
+  <i class="fas fa-phone"></i>
+  <div class="cta-text">
+  <h4>Call us</h4>
+  <span>9876543210 0</span>
+  </div>
+  </div>
+  </div>
+  <div class="col-xl-4 col-md-4 mb-30">
+  <div class="single-cta">
+  <i class="far fa-envelope-open"></i>
+  <div class="cta-text">
+  <h4>Mail us</h4>
+  <span>mail@info.com</span>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="footer-content pt-5 pb-5">
+  <div class="row">
+  <div class="col-xl-4 col-lg-4 mb-50">
+  <div class="footer-widget">
+  <div class="footer-logo">
+  <a href="index.html"><img src="logo.png" class="img-fluid" alt="logo"></a>
+  </div>
+  <div class="footer-text">
+  <p>Lorem ipsum dolor sit amet, consec tetur adipisicing elit, sed do eiusmod tempor incididuntut consec tetur adipisicing
+  elit,Lorem ipsum dolor sit amet.</p>
+  </div>
+  <div class="footer-social-icon">
+  <span>Follow us</span>
+  <a href="#"><i class="fab fa-facebook-f facebook-bg"></i></a>
+  <a href="#"><i class="fab fa-twitter twitter-bg"></i></a>
+  <a href="#"><i class="fab fa-google-plus-g google-bg"></i></a>
+  </div>
+  </div>
+  </div>
+  <div class="col-xl-4 col-lg-4 col-md-6 mb-30">
+  <div class="footer-widget">
+  <div class="footer-widget-heading">
+  <h3>Useful Links</h3>
+  </div>
+  <ul>
+  <li><a href="#">Home</a></li>
+  <li><a href="#">about</a></li>
+  <li><a href="#">services</a></li>
+  <li><a href="#">portfolio</a></li>
+  <li><a href="#">Contact</a></li>
+  <li><a href="#">About us</a></li>
+  <li><a href="#">Our Services</a></li>
+  <li><a href="#">Expert Team</a></li>
+  <li><a href="#">Contact us</a></li>
+  <li><a href="#">Latest News</a></li>
+  </ul>
+  </div>
+  </div>
+  <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
+  <div class="footer-widget">
+  <div class="footer-widget-heading">
+  <h3>Subscribe</h3>
+  </div>
+  <div class="footer-text mb-25">
+  <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
+  </div>
+  <div class="subscribe-form">
+  <form action="#">
+  <input type="text" placeholder="Email Address">
+  <button><i class="fab fa-telegram-plane"></i></button>
+  </form>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  </div>
+  <div class="copyright-area">
+  <div class="container">
+  <div class="row">
+  <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+  <div class="copyright-text">
+  <p>Copyright &copy; 2018, All Right Reserved <a href="#">Gaurav</a></p>
+  </div>
+  </div>
+  <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+  </div>
+  </div>
+  </div>
+  </div>
+  </footer>
   
   
  
