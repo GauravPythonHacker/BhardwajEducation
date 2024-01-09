@@ -15,37 +15,19 @@ section.classList.add('active');
 });
 });
 });
-let tasks = [];
+// Assuming you're using plain JavaScript
 
-// Function to handle task creation
-document.getElementById('taskForm').addEventListener('submit', function(event) {
-event.preventDefault();
-
-const title = document.getElementById('taskTitle').value;
-const desc = document.getElementById('taskDesc').value;
-const deadline = document.getElementById('deadline').value;
-
-const task = { title, desc, deadline };
-tasks.push(task);
-
-displayTasks();
-document.getElementById('taskForm').reset();
+// Assuming you're using plain JavaScript
+document.querySelector('.btn').addEventListener('click', function() {
+    document.querySelector('.card').style.display = 'none';
+    document.getElementById('pythoncourse').style.display = 'block';
 });
 
-// Function to display tasks
-function displayTasks() {
-const tasksList = document.getElementById('tasks');
-tasksList.innerHTML = '';
-
-tasks.forEach((task, index) => {
-const li = document.createElement('li');
-li.innerHTML = `<strong>${task.title}</strong>: ${task.desc} - Deadline: ${task.deadline}`;
-tasksList.appendChild(li);
+document.getElementById('backButton').addEventListener('click', function() {
+    document.querySelector('.card').style.display = 'block';
+    document.getElementById('pythoncourse').style.display = 'none';
 });
-}
-function openmathsPage() {
-window.open('maths.html', '_blank');
-}
+
 let slideIndex = 0;
 const slides = document.querySelectorAll('.hero-slide');
 const slideCount = slides.length;
@@ -62,5 +44,67 @@ function autoSlide() {
 
 let slideTimer = setInterval(autoSlide, 3000); // Auto slide every 3 seconds
 
+function askQuestion() {
+  const userInput = document.getElementById('userInput');
+  const question = userInput.value;
+  if (question.trim() !== '') {
+    const questionsList = document.getElementById('questions');
+    const newQuestion = document.createElement('li');
+    newQuestion.classList.add('question');
+    newQuestion.innerHTML = `
+      <div><strong>Question:</strong> ${question}</div>
+      <button class="solvebtn" onclick="solveQuestion(this)">Solve</button>
+    `;
+    questionsList.appendChild(newQuestion);
+    userInput.value = '';
+  }
+}
 
+function solveQuestion(button) {
+  const questionText = button.previousElementSibling.textContent;
+  const solution = prompt(`Provide a solution for:\n${questionText}`);
+  if (solution) {
+    // You can handle displaying the solution here
+    alert(`Solution for:\n${questionText}\n\n${solution}`);
+  }
+}
+document.addEventListener("DOMContentLoaded", function() {
+  const searchInput = document.getElementById('searchInput');
+  const searchBtn = document.getElementById('searchBtn');
+  const userInput = document.getElementById('userInput');
+  const submitButton = document.getElementById('submitButton');
+
+  searchBtn.addEventListener('click', function() {
+    if (searchInput.value === '') {
+      alert('Please fill the search field');
+    }
+  });
+
+  submitButton.addEventListener('click', function() {
+    if (userInput.value === '') {
+      alert('Please fill the user input field');
+    }
+  });
+});
+
+
+// Get elements from the DOM
+const editButton = document.getElementById('editButton');
+const userName = document.getElementById('userName');
+const userEmail = document.getElementById('userEmail');
+
+// Function to handle editing the profile
+function editProfile() {
+  const newName = prompt('Enter new name:');
+  const newEmail = prompt('Enter new email:');
+
+  if (newName && newEmail) {
+    userName.textContent = newName;
+    userEmail.textContent = newEmail;
+    // Here you can save the updated information (e.g., send it to a server)
+  }
+}
+
+// Event listener for the edit button
+editButton.addEventListener('click', editProfile);
 
