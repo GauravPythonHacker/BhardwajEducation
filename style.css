@@ -1160,5 +1160,23 @@ img{
   	border: 3px solid orange;
   	
   }
-  
+  /* Example for navigation */
+ /* For screens smaller than 768px */
+ @media (max-width: 768px) {
+ /* Adjust styles here */
+ body {
+ font-size: 14px;
+ }
+ 
+ /* Example: Modify layout for smaller screens */
+ .footer-logo img {
+ max-width: 150px;
+ }
+ }
+ 
+ /* For screens smaller than 500px */
+ @media (max-width: 500px) {
+ /* Adjust styles here */
+ /* Example: Modify layout for even smaller screens */
+ }
   
