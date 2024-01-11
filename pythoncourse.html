@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple HTML Page</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(135deg, #FAB2FF 10%, #1904E5 100%);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            color: #333333;
+            scroll-behavior: smooth; 
+            /* Enable smooth scrolling */
+        }
+		header {
+		background-color: #333;
+		color: white;
+		text-align: center;
+		padding: 2px 0;
+		}
+		
+		.navbar{
+		position: fixed;
+		width: 100%;
+		background-image: linear-gradient(135deg, #FAB2FF 10%, #1904E5 100%);
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		color: #333333;
+		box-shadow: 0px -2px 6px rgba(0, 0, 0, 1);
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		height: 60px;
+		z-index: 1000000;
+		}
+		
+		main{
+			margin-top: 60px;
+		}
+        /* Horizontal scroll section */
+        .scroll-container {
+        	overflow-x: auto; /* Enable horizontal scrolling */
+            white-space: nowrap; /* Prevent content from wrapping */
+            padding: 10px;
+        }
+
+        .scroll-item {
+            display: inline-block;
+            padding: 4px; /* Adjust padding inside each item */
+            border-radius: 5px;
+            min-width: 10%; /* Adjust width of each item */
+            background-color: #272727;
+            color: white;
+            transition: background-color 0.3s ease; /* Smooth transition */
+        }
+
+        .scroll-item:hover {
+            background-color: #444; /* Change color on hover */
+        }
+
+        .scroll-item.active {
+            background-color: #6c757d; /* Highlight the active item */
+        }
+
+        .exitbtn {
+            color: white;
+            background-color: red;
+            border-radius: 5px;
+            font-size: 10px;
+        }
+
+        /* Define sections */
+        section {
+            height: 100vh; /* Set the height of each section */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2em;
+        }
+        a{
+        	text-decoration: none;
+        }
+        
+    </style>
+</head>
+<body>
+<header>
+<nav class = "navbar">
+<button class="exitbtn"> <a href="project.html"><h3> Exit Course </h3> </a></button>
+
+<div class="pythoncourses">
+    <div class="scroll-container">
+        <a href="#video-lectures" class="scroll-item">Video Lectures</a>
+        <a href="#notes" class="scroll-item">Notes</a>
+        <a href="#books" class="scroll-item">Books</a>
+        <a href="#assignments" class="scroll-item">Assignments</a>
+        <a href="#projects" class="scroll-item">Projects</a>
+        <a href="#quizzes" class="scroll-item">Quizzes</a>
+    </div>
+   </nav>
+   </header>
+  
+    <!-- Sections -->
+    <section id="video-lectures">
+        <center>
+        
+       		 	<center><h2>Videos Section</h2></center>
+       		 	
+        </center>
+    </section>
+
+    <section id="notes">
+        <center><h2>Notes Section</h2></center>
+    </section>
+
+    <section id="books">
+        <center><h2>Books Section</h2></center>
+    </section>
+
+    <section id="assignments">
+        <center><h2>Assignments Section</h2></center>
+    </section>
+
+    <section id="projects">
+        <center><h2>Projects Section</h2></center>
+    </section>
+
+    <section id="quizzes">
+        <center><h2>Quizzes Section</h2></center>
+    </section>
+</div>
+<script>
+    const scrollItems = document.querySelectorAll('.scroll-item');
+    scrollItems.forEach(item => {
+        item.addEventListener('click', function (e) {
+            e.preventDefault();
+            // Remove 'active' class from all items
+            scrollItems.forEach(item => item.classList.remove('active'));
+            // Add 'active' class to the clicked item
+            this.classList.add('active');
+            // Smooth scroll to the section
+            const targetId = this.getAttribute('href').substring(1);
+            document.getElementById(targetId).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
