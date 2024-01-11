@@ -1108,34 +1108,34 @@ img{
   }
   
   .input-container {
-    position: fixed;
-    bottom: 0;
-   	width: 100%;
-    background-color: #f9f9f9;
-    padding: 10px 1px;
-    box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
-    display: flex;
-    align-items: center;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #f9f9f9;
+  padding: 10px;
+  box-shadow: 0px -2px 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  z-index: 20;
   }
   
-  input[type="text"] {
-    flex: 1;
-    padding: 8px;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    margin-right: 10px;
+  .input-container input[type="text"] {
+  flex: 1;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 10px;
   }
-  
   
   .input-container button {
-  	padding: 8px 16px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
+  padding: 8px 16px;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
   }
   
   .solvebtn {
